@@ -20,9 +20,10 @@ a {
     text-decoration: none;
 }
 body {
+    color: ;
+    background: radial-gradient(rgb(10, 1, 87) ,rgb(19, 18, 18) ,black);
     font-family: 'iranyekan_numbers','iranyekan';
     direction: ltr;
-    background-color: black;
 }
 .container {
     width: 95%;
@@ -47,6 +48,7 @@ header .left__beta {
     font-size: 0.74rem;
     text-align: center;
     padding: 0.1rem;
+    width: 30px;
 } 
 header .header__grid--right {
     display: grid;
@@ -94,10 +96,12 @@ header .grid--right a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 }
 .container__3--left {
-    width: 45%;
+    width: 190px;
+    height: 30px;
     border-radius: 0.3rem;
     background-color: white;
     border: solid 1px rgb(229, 231, 235) ;
@@ -109,12 +113,14 @@ header .grid--right a:hover {
     color: rgb(63, 63, 63);
 }
 .container__3--right {
-    width: 45%;
+    width: 190px;
+    height: 22px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 0.8rem;
     color: white;
+    opacity: 0.4;
     padding: 0.3rem;
     border-radius: 0.3rem;
     background-color: rgb(25, 30, 38);
@@ -137,10 +143,21 @@ section .icon {
 .container__4 a {
     color: white;
 }
+.container__4--flex a {
+    display: flex;
+    flex-direction: row;
+    transform: rotateX(0);
+}
+.container__4--flex:hover a {
+    transform: translateY(0);
+}
+.container__4--flex:hover a {
+    transform: translateY(-20px);
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+}
 @media (max-width: 1100px) {
-    .container {
-        width: 99%;
-    }
+   
     .container__1 {
         width: 90%;
         margin-top: 4rem;
