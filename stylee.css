@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "iranyekan" ;
+    src: url("fonts/iranyekan/eot/iranyekanwebregular.eot?#") ,
+    url("fonts/iranyekan/ttf/iranyekanwebregular.ttf") format('truetype'),
+    url("fonts/iranyekan/woff/iranyekanwebregular.woff") format('woff'),
+    url("fonts/iranyekan/svg/iranyekanwebregular.svg") format('svg');
+}
+@font-face {
+    font-family: "iranyekan_numbers" ;
+    src: url("fonts/iranyekan_numbers/eot/iranyekanwebregular(fanum).eot?#") ,
+    url("fonts/iranyekan_numbers/ttf/iranyekanwebregular(fanum).ttf") format('truetype'),
+    url("fonts/iranyekan_numbers/woff/iranyekanwebregular(fanum).woff") format('woff'),
+    url("fonts/iranyekan_numbers/svg/iranyekanwebregular(fanum).svg") format('svg');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: radial-gradient(rgb(10, 1, 87) ,rgb(19, 18, 18) ,black);
+    font-family: 'iranyekan_numbers','iranyekan';
+    direction: ltr;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header .header__grid--left {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 20%;
+}
+header .header__grid--left a {
+    color: white;
+}
+header .left__beta {
+    border-radius: 0.1rem;
+    border: rgba(0,229,254,.824) solid 1px;
+    color: rgba(0,229,254,.824);
+    font-size: 0.74rem;
+    text-align: center;
+    padding: 0.1rem;
+    width: 30px;
+} 
+header .header__grid--right {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 30%;
+    direction: rtl;
+}
+header .grid--right {
+    color: rgb(147, 152, 157);
+}
+header .grid--right a {
+    color: rgb(147, 152, 157);
+    padding: 0.5rem;
+}
+header .grid--right a:hover {
+    border-radius: 0.2rem;
+    background-color: rgb(26, 26, 26);
+    border: 1px solid rgb(51, 51, 51);
+}
+.p {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 2.25rem;
+    margin-top: 4.5rem;
+}
+.p b{
+    color: white;
+}
+.p-2 {
+    margin: 0 auto;
+    width: 65%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(147, 152, 157);
+}
+.p-2 a {
+    color: white;
+}
+@media (max-width: 1100px) {
+    .p-2{
+        width: 90%;
+    }
+} 
+@media (max-width: 770px) {
+    header .header__grid--left {
+        width: 30%;
+    }
+    header .header__grid--right {
+        width: 40%;
+    }
+    header .header__grid--right .border {
+        display: none;
+    }
+
+}    
