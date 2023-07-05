@@ -19,6 +19,9 @@
 a {
     text-decoration: none;
 }
+img {
+    width: 100%;
+}
 body {
     background: radial-gradient(rgb(10, 1, 87) ,rgb(19, 18, 18) ,black);
     font-family: 'iranyekan_numbers','iranyekan';
@@ -40,7 +43,7 @@ header .header__grid--left {
 header .header__grid--left a {
     color: white;
 }
-header .left__beta {
+header .header__grid--left .left__beta {
     border-radius: 0.1rem;
     border: rgba(0,229,254,.824) solid 1px;
     color: rgba(0,229,254,.824);
@@ -55,26 +58,26 @@ header .header__grid--right {
     width: 30%;
     direction: rtl;
 }
-header .grid--right {
+header .header__grid--right .grid--right {
     color: rgb(147, 152, 157);
 }
-header .grid--right a {
+header .header__grid--right .grid--right a {
     color: rgb(147, 152, 157);
     padding: 0.5rem;
 }
-header .grid--right a:hover {
+header .header__grid--right .grid--right a:hover {
     border-radius: 0.2rem;
     background-color: rgb(26, 26, 26);
     border: 1px solid rgb(51, 51, 51);
 }
-.p {
+.p-1 {
     text-align: center;
     width: 40%;
     margin: 0 auto;
     font-size: 2.25rem;
     margin-top: 4.5rem;
 }
-.p b{
+.p-1 b{
     color: white;
 }
 .p-2 {
@@ -87,9 +90,60 @@ header .grid--right a:hover {
 .p-2 a {
     color: white;
 }
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4%;
+    width: 60%;
+    margin: 2rem auto;
+}
+.grid .grid__post {
+    width: 100%;
+}
+.grid .grid__post .grid__post__img {
+    margin-bottom: -1rem;
+}
+.grid .grid__post img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: rgb(47, 49, 51) 1px solid;
+}
+.grid .grid__post .grid__post__text {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: rgb(47, 49, 51) 1px solid;
+}
+.grid .grid__post__text .top{
+    color: white;
+    margin: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+}
+.grid .grid__post__text .botton {
+    color: rgb(117, 121, 124);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    margin: 1rem;
+    width: 100%;
+    font-size: 0.8rem;
+}
+.grid .grid__post__text .botton .p {
+    width: 70%;
+}
+.grid .grid__post__text .botton .svg {
+    width: 30%;
+}
 @media (max-width: 1100px) {
+    .p {
+        margin-top: 3rem;
+    }
     .p-2{
         width: 90%;
+    }
+    .grid {
+        width: 70%;
     }
 } 
 @media (max-width: 770px) {
@@ -102,5 +156,24 @@ header .grid--right a:hover {
     header .header__grid--right .border {
         display: none;
     }
-
+    .p {
+        margin-top: 2rem;
+    }
+    .p-2{
+        font-size: 1.1rem;
+        width: 95%;
+    }
+    .grid {
+        width: 90%;
+    }
 }    
+
+
+
+
+
+
+
+
+
+
