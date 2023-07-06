@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 body {
-    background: radial-gradient(rgb(10, 1, 87) ,rgb(19, 18, 18) ,black);
+    background: radial-gradient(rgb(5, 1, 37) ,black ,black);
     font-family: 'iranyekan_numbers','iranyekan';
     direction: ltr;
 }
@@ -145,26 +145,28 @@ section .icon {
 .container__4--flex a {
     display: flex;
     flex-direction: row;
-     animation-name: react;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
 }
-/* .container__4--flex:hover a {
-    transform: translateY(-20px);
-    
-} */
-@keyframes react {
+.container__4--flex:hover a {
+    animation-timing-function: ease-in-out;
+    animation: my__animation;
+    animation-duration: 2s;
+}
+@keyframes my__animation {
     0% {
-      top: 0;
+        transform: translateY(0px);
     }
-    100% {
-        top: -20px;
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@media (max-width: 1350px) {
+    .container__1 {
+        margin-top: 3rem;
     }
 }
 @media (max-width: 1100px) {
     .container__1 {
         width: 90%;
-        margin-top: 4rem;
     }
     .container__2 {
         width: 75%;
@@ -174,7 +176,13 @@ section .icon {
         width: 60%;
     } 
     .container__4 {
-        width: 50%;
+        width: 35%;
+        
+    }
+} 
+@media (max-width: 900px) {
+    .container__4 {
+        width: 45%;
     }
 } 
 @media (max-width: 770px) {
@@ -208,6 +216,11 @@ section .icon {
         display: none;
     }
     .container__4 {
-        width: 70%;
+        width: 50%;
     }
 } 
+@media (max-width: 650px) {
+    .container__4 {
+        width: 70%;
+    }
+}

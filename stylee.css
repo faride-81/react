@@ -23,7 +23,7 @@ img {
     width: 100%;
 }
 body {
-    background: radial-gradient(rgb(10, 1, 87) ,rgb(19, 18, 18) ,black);
+    background: radial-gradient(rgb(5, 1, 37) ,black ,black);
     font-family: 'iranyekan_numbers','iranyekan';
     direction: ltr;
 }
@@ -94,7 +94,7 @@ header .header__grid--right .grid--right a:hover {
     display: grid;
     grid-template-columns: auto auto;
     gap: 4%;
-    width: 60%;
+    width: 55%;
     margin: 2rem auto;
 }
 .grid .grid__post {
@@ -110,9 +110,12 @@ header .header__grid--right .grid--right a:hover {
     border: rgb(47, 49, 51) 1px solid;
 }
 .grid .grid__post .grid__post__text {
+    width: 100%;
+    background-color: black;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border: rgb(47, 49, 51) 1px solid;
+    border-top-color: white;
 }
 .grid .grid__post__text .top{
     color: white;
@@ -124,16 +127,42 @@ header .header__grid--right .grid--right a:hover {
     color: rgb(117, 121, 124);
     display: flex;
     flex-direction: row-reverse;
-    justify-content: end;
-    margin: 1rem;
+    justify-content: start;
     width: 100%;
+    margin: 0.5rem;
     font-size: 0.8rem;
 }
-.grid .grid__post__text .botton .p {
-    width: 70%;
+.grid .grid__post:hover .grid__post__text {
+    background-color: rgb(15, 15, 15);    
 }
-.grid .grid__post__text .botton .svg {
+.container__4 {
     width: 30%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff6e;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+.container__4 a {
+    color: white;
+}
+.container__4--flex a {
+    display: flex;
+    flex-direction: row;
+}
+.container__4--flex:hover a {
+    animation-timing-function: ease-in-out;
+    animation: my__animation;
+    animation-duration: 2s;
+}
+@keyframes my__animation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 @media (max-width: 1100px) {
     .p {
@@ -144,6 +173,14 @@ header .header__grid--right .grid--right a:hover {
     }
     .grid {
         width: 70%;
+    }
+    .container__4 {
+        width: 35%;
+    }
+} 
+@media (max-width: 900px) {
+    .container__4 {
+        width: 45%;
     }
 } 
 @media (max-width: 770px) {
@@ -166,7 +203,15 @@ header .header__grid--right .grid--right a:hover {
     .grid {
         width: 90%;
     }
+    .container__4 {
+        width: 50%;
+    }
 }    
+@media (max-width: 650px) {
+    .container__4 {
+        width: 70%;
+    }
+}
 
 
 
