@@ -144,24 +144,21 @@ section .icon {
 }
 .container__4--flex a {
     display: flex;
-    animation-duration: 2s;
-    transform: translateY(0px);
-    transition-property: transform;
-position: relative;
     flex-direction: row;
 }
 .container__4--flex:hover a {
-    transform: translateY(-20px);
-    
+    animation-timing-function: ease-in-out;
+    animation: my__animation;
+    animation-duration: 2s;
 }
-/* @keyframes my__animation {
+@keyframes my__animation {
     0% {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
-} */
+}
 @media (max-width: 1350px) {
     .container__1 {
         margin-top: 3rem;
